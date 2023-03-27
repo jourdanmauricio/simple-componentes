@@ -6,8 +6,7 @@ const SpinnerCode = ({ code, setCode }) => {
   ############
   #   HTML   #
   ############
-  import styles from './Spinner.module.css';
-  <div className={styles.spinner}></div>;
+  <div class="spinner"></div>;
   
   ###########
   #   CSS   #

@@ -1,7 +1,9 @@
+import { useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import SpinnerCode from '@/components/Spinner/SpinnerCode';
-import { useRef, useState } from 'react';
 import ParallaxCode from '@/components/Parallax/ParallaxCode';
+import AlternateTextImageCode from '@/components/AlternateTextImage/AlternateTextImageCode';
+import TextCenterImageCode from '@/components/TextCenterImage/TextCenterImageCode';
 
 const Code = () => {
   const { component } = useParams();
@@ -28,6 +30,13 @@ const Code = () => {
         {component === 'spinner' && (
           <SpinnerCode code={code} setCode={setCode} />
         )}
+        {component === 'alternate-text-image' && (
+          <AlternateTextImageCode code={code} setCode={setCode} />
+        )}
+        {component === 'text-center-image' && (
+          <TextCenterImageCode code={code} setCode={setCode} />
+        )}
+
         <span
           ref={myRef}
           id="test-id"

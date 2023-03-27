@@ -1,0 +1,36 @@
+.section {
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.section__article {
+  padding: 20px 0;
+  width: 50%;
+  flex: 0 0 100%;
+}
+
+.section__article h2 {
+  padding: 20px 0;
+}
+.section__img {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .experiences__container {
+    flex-direction: row;
+  }
+  .section {
+    display: flex;
+    align-items: center;
+  }
+  .section__article {
+    flex: 0 0 50%;
+  }
+  .section__reverse {
+    flex-direction: row-reverse;
+  }
+}

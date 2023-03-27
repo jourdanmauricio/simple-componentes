@@ -6,13 +6,12 @@ const ParallaxCode = ({ code, setCode }) => {
   ############
   #   HTML   #
   ############
-  import styles from './Parallax.module.css';
-  <div className={styles.bg__attachment} />;
+  <div class="bg__attachment"></div>;
   
   ###########
   #   CSS   #
   ###########
-  .bg-attachment {
+  .bg__attachment {
     background-image: url('/assets/images/parallax.webp');
     background-repeat: no-repeat;
     background-size: cover;

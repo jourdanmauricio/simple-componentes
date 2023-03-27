@@ -6,14 +6,24 @@ const Home = () => {
       Recopilación de componentes desarrollados en html y css. Otros también
       incluyen javascript.
       <ul className="mt-4">
-        <li className="hover:underline list-disc">
+        {/* <li className="hover:underline list-disc">
           <Link to="/components/modal-html">Ventana Modal. HTML / CSS</Link>
-        </li>
+        </li> */}
         <li className="hover:underline list-disc">
           <Link to="/components/parallax">Parallax. HTML / CSS</Link>
         </li>
         <li className="hover:underline list-disc">
           <Link to="/components/spinner">Spinner. HTML / CSS</Link>
+        </li>
+        <li className="hover:underline list-disc">
+          <Link to="/components/alternate-text-image">
+            Texto e imágenes alternados. HTML / CSS
+          </Link>
+        </li>
+        <li className="hover:underline list-disc">
+          <Link to="/components/text-center-image">
+            Texto centrado sobre imágen. HTML / CSS
+          </Link>
         </li>
       </ul>
     </div>

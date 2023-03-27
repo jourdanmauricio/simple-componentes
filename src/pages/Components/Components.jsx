@@ -3,6 +3,8 @@ import ModalHtml from '@/components/ModalHtml/ModalHtml';
 import Spinner from '@/components/Spinner/Spinner';
 import { useState } from 'react';
 import Parallax from '@/components/Parallax/Parallax';
+import AlternateTextImage from '@/components/AlternateTextImage/AlternateTextImage';
+import TextCenterImage from '@/components/TextCenterImage/TextCenterImage';
 
 const Components = () => {
   const { component } = useParams();
@@ -19,6 +21,8 @@ const Components = () => {
         {component === 'modal-html' && <ModalHtml />}
         {component === 'parallax' && <Parallax />}
         {component === 'spinner' && <Spinner />}
+        {component === 'alternate-text-image' && <AlternateTextImage />}
+        {component === 'text-center-image' && <TextCenterImage />}
       </div>
 
       <div onClick={onToggle} className="mt-4">
