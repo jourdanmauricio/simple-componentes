@@ -1,4 +1,4 @@
-import{j as e,u as s,r as i,a}from"./index-1202b76e.js";const d=({code:r,setCode:t})=>(t(`
+import{j as e,u as s,r as i,a}from"./index-81810e2e.js";const l=({code:r,setCode:t})=>(t(`
   ############
   #   HTML   #
   ############
@@ -26,4 +26,4 @@ import{j as e,u as s,r as i,a}from"./index-1202b76e.js";const d=({code:r,setCode
     100% {
       transform: rotate(360deg);
     }
-  }`),e("div",{children:e("pre",{children:r})})),m=()=>{const{component:r}=s(),[t,n]=i.useState(null),o=()=>{navigator.clipboard.writeText(t)};return e("div",{children:a("div",{className:"relative w-full py-2 mt-4 border border-slate-200",children:[r==="modal-html"&&e(ModalHtml,{}),r==="spinner"&&e(d,{code:t,setCode:n}),e("button",{onClick:o,className:"absolute top-4 right-4 p-2 border border-slate-200",children:"Copy"})]})})};export{m as default};
+  }`),e("div",{children:e("pre",{children:r})})),c=()=>{const{component:r}=s(),[t,o]=i.useState(null),n=()=>{console.log("..."),navigator.clipboard.writeText(t)};return e("div",{children:a("div",{className:"relative w-full py-2 mt-4 border border-slate-200",children:[r==="modal-html"&&e(ModalHtml,{}),r==="spinner"&&e(l,{code:t,setCode:o}),e("button",{onClick:n,className:"absolute top-4 right-4 p-2 border border-slate-200",children:"Copy"})]})})};export{c as default};
