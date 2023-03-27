@@ -7,6 +7,7 @@ const Code = () => {
   const [code, setCode] = useState(null);
 
   const onClick = () => {
+    console.log('...');
     navigator.clipboard.writeText(code);
   };
 
