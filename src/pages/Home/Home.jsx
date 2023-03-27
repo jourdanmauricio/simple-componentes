@@ -6,7 +6,7 @@ const Home = () => {
       Recopilación de componentes desarrollados en html y css. Otros también
       incluyen javascript.
       <ul className="mt-4">
-        <li className="hover:underline">
+        <li className="hover:underline list-disc">
           <Link to="/components/modal-html">Ventana Modal. HTML / CSS</Link>
           <Link to="/components/spinner">Spinner. HTML / CSS</Link>
         </li>

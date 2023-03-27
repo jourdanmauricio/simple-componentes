@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
+
 const SpinnerCode = ({ code, setCode }) => {
-  setCode(`
+  useEffect(() => {
+    setCode(`
   ############
   #   HTML   #
   ############
@@ -14,7 +17,7 @@ const SpinnerCode = ({ code, setCode }) => {
     height: 5vw;
     margin-left: auto;
     margin-right: auto;
-    border: 0.5vw solid rgba(0, 0, 0, 0.1);
+    border: 0.5vw solid rgba(255, 255, 255, 0.7);
     border-top-color: #09f;
     border-radius: 50%;
     animation: spinner 1s ease-out infinite;
@@ -28,6 +31,8 @@ const SpinnerCode = ({ code, setCode }) => {
       transform: rotate(360deg);
     }
   }`);
+  }, []);
+
   return (
     <div>
       <pre>{code}</pre>
