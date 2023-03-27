@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import SpinnerCode from '@/components/Spinner/SpinnerCode';
 import { useRef, useState } from 'react';
+import ParallaxCode from '@/components/Parallax/ParallaxCode';
 
 const Code = () => {
   const { component } = useParams();
@@ -21,6 +22,9 @@ const Code = () => {
     <div>
       <div className="relative w-full py-2 mt-4 border border-slate-200">
         {component === 'modal-html' && <ModalHtml />}
+        {component === 'parallax' && (
+          <ParallaxCode code={code} setCode={setCode} />
+        )}
         {component === 'spinner' && (
           <SpinnerCode code={code} setCode={setCode} />
         )}

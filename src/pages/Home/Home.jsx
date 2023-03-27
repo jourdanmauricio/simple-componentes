@@ -8,6 +8,11 @@ const Home = () => {
       <ul className="mt-4">
         <li className="hover:underline list-disc">
           <Link to="/components/modal-html">Ventana Modal. HTML / CSS</Link>
+        </li>
+        <li className="hover:underline list-disc">
+          <Link to="/components/parallax">Parallax. HTML / CSS</Link>
+        </li>
+        <li className="hover:underline list-disc">
           <Link to="/components/spinner">Spinner. HTML / CSS</Link>
         </li>
       </ul>
