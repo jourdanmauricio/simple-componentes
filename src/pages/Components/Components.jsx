@@ -7,6 +7,7 @@ import AlternateTextImage from '@/components/AlternateTextImage/AlternateTextIma
 import TextCenterImage from '@/components/TextCenterImage/TextCenterImage';
 import SubscriptionForm from '@/components/SubscriptionForm/SubscriptionForm';
 import Loader from '@/components/Loader/Loader';
+import Fly from '@/components/Fly/Fly';
 
 const Components = () => {
   const { component } = useParams();
@@ -27,6 +28,7 @@ const Components = () => {
         {component === 'text-center-image' && <TextCenterImage />}
         {component === 'subscription-form' && <SubscriptionForm />}
         {component === 'loader' && <Loader />}
+        {component === 'fly' && <Fly />}
       </div>
 
       <div onClick={onToggle} className="mt-4">

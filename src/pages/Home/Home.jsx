@@ -35,6 +35,10 @@ const Home = () => {
         <li className="hover:underline list-disc">
           <Link to="/components/loader">Loader. HTML / CSS</Link>
         </li>
+
+        <li className="hover:underline list-disc">
+          <Link to="/components/fly">Mover componente. HTML / CSS</Link>
+        </li>
       </ul>
     </div>
   );

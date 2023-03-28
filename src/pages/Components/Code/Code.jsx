@@ -6,6 +6,7 @@ import AlternateTextImageCode from '@/components/AlternateTextImage/AlternateTex
 import TextCenterImageCode from '@/components/TextCenterImage/TextCenterImageCode';
 import SubscriptionFormCode from '@/components/SubscriptionForm/SubscriptionFormCode';
 import LoaderCode from '@/components/Loader/LoaderCode';
+import FlyCode from '@/components/Fly/FlyCode';
 
 const Code = () => {
   const { component } = useParams();
@@ -44,6 +45,7 @@ const Code = () => {
         )}
 
         {component === 'loader' && <LoaderCode code={code} setCode={setCode} />}
+        {component === 'fly' && <FlyCode code={code} setCode={setCode} />}
 
         <span
           ref={myRef}
