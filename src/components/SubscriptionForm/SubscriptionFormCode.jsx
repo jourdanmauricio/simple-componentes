@@ -234,7 +234,75 @@ const SubscriptionFormCode = ({ code, setCode }) => {
       flex-direction: row;
       gap: 16px;
     }
-  }`);
+  }
+  
+  ###########
+  #   JS    #
+  ###########      
+  const $form = document.querySelector('.section__form');
+  const $inputs = document.querySelectorAll('.form__input[required]');
+  const $name = document.getElementById('name');
+  const $email = document.getElementById('email');
+  
+  $inputs.forEach((input) => {
+    const $span = document.createElement('span');
+    $span.id = input.name;
+    $span.textContent = input.title;
+    $span.classList.add('form__error');
+    input.insertAdjacentElement('afterend', $span);
+  });
+  
+  document.addEventListener('keyup', (e) => {
+    if (e.target.matches('.form__input[required]')) {
+      let $input = e.target;
+      let pattern = $input.pattern || $input.dataset.pattern;
+    
+      if (pattern && $input.value !== '') {
+        let regex = new RegExp(pattern);
+        return !regex.exec($input.value)
+          ? document.getElementById($input.name).classList.add('error')
+          : document.getElementById($input.name).classList.remove('error');
+      }
+    
+      if (!pattern) {
+        return !$input.value === ''
+          ? document.getElementById($input.name).classList.add('error')
+          : document.getElementById($input.name).classList.remove('error');
+      }
+    }
+  });
+  
+  document.addEventListener('submit', (e) => {
+    const formData = new FormData($form);
+    const data = Object.fromEntries(formData);
+  
+    let error = false;
+    for (const property in data) {
+      if (data[property].trim().length == 0) {
+        error = true;
+        const $element = document.getElementById(property);
+        $element.textContent = 'Requerido';
+        $element.classList.add('error');
+      }
+    }
+  
+    if (error === true) {
+      e.preventDefault();
+      return;
+    }
+  
+    const $loader = document.querySelector('.spinner');
+    const $response = document.querySelector('.form__response');
+  
+    $loader.classList.remove('none');
+  
+    setTimeout(() => {
+      $loader.classList.add('none');
+      $response.classList.remove('none');
+      $form.reset();
+      setTimeout(() => $response.classList.add('none'), 3000);
+    }, 3000);
+  });`);
   }, []);
   return (
     <div>

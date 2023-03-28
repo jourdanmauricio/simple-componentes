@@ -5,6 +5,7 @@ import ParallaxCode from '@/components/Parallax/ParallaxCode';
 import AlternateTextImageCode from '@/components/AlternateTextImage/AlternateTextImageCode';
 import TextCenterImageCode from '@/components/TextCenterImage/TextCenterImageCode';
 import SubscriptionFormCode from '@/components/SubscriptionForm/SubscriptionFormCode';
+import LoaderCode from '@/components/Loader/LoaderCode';
 
 const Code = () => {
   const { component } = useParams();
@@ -41,6 +42,9 @@ const Code = () => {
         {component === 'subscription-form' && (
           <SubscriptionFormCode code={code} setCode={setCode} />
         )}
+
+        {component === 'loader' && <LoaderCode code={code} setCode={setCode} />}
+
         <span
           ref={myRef}
           id="test-id"

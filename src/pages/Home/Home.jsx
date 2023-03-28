@@ -28,8 +28,12 @@ const Home = () => {
 
         <li className="hover:underline list-disc">
           <Link to="/components/subscription-form">
-            Formulario suscribete. HTML / CSS
+            Formulario suscribete. HTML / CSS / JS
           </Link>
+        </li>
+
+        <li className="hover:underline list-disc">
+          <Link to="/components/loader">Loader. HTML / CSS</Link>
         </li>
       </ul>
     </div>
