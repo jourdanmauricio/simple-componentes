@@ -25,6 +25,12 @@ const Home = () => {
             Texto centrado sobre imágen. HTML / CSS
           </Link>
         </li>
+
+        <li className="hover:underline list-disc">
+          <Link to="/components/subscription-form">
+            Formulario suscribete. HTML / CSS
+          </Link>
+        </li>
       </ul>
     </div>
   );

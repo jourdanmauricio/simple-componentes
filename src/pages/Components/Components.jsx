@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Parallax from '@/components/Parallax/Parallax';
 import AlternateTextImage from '@/components/AlternateTextImage/AlternateTextImage';
 import TextCenterImage from '@/components/TextCenterImage/TextCenterImage';
+import SubscriptionForm from '../../components/SubscriptionForm/SubscriptionForm';
 
 const Components = () => {
   const { component } = useParams();
@@ -23,6 +24,7 @@ const Components = () => {
         {component === 'spinner' && <Spinner />}
         {component === 'alternate-text-image' && <AlternateTextImage />}
         {component === 'text-center-image' && <TextCenterImage />}
+        {component === 'subscription-form' && <SubscriptionForm />}
       </div>
 
       <div onClick={onToggle} className="mt-4">

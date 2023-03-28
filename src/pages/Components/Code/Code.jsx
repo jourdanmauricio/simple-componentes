@@ -4,6 +4,7 @@ import SpinnerCode from '@/components/Spinner/SpinnerCode';
 import ParallaxCode from '@/components/Parallax/ParallaxCode';
 import AlternateTextImageCode from '@/components/AlternateTextImage/AlternateTextImageCode';
 import TextCenterImageCode from '@/components/TextCenterImage/TextCenterImageCode';
+import SubscriptionFormCode from '@/components/SubscriptionForm/SubscriptionFormCode';
 
 const Code = () => {
   const { component } = useParams();
@@ -37,6 +38,9 @@ const Code = () => {
           <TextCenterImageCode code={code} setCode={setCode} />
         )}
 
+        {component === 'subscription-form' && (
+          <SubscriptionFormCode code={code} setCode={setCode} />
+        )}
         <span
           ref={myRef}
           id="test-id"
